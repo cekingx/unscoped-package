@@ -1,0 +1,51 @@
+{
+  "version": "0.1.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why"
+  },
+  "peerDependencies": {},
+  "husky": {},
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "cekingx-unscoped-package",
+  "author": "Dirga Yasa",
+  "module": "dist/unscoped-package.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/unscoped-package.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/unscoped-package.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^11.1.4",
+    "husky": "^9.0.11",
+    "size-limit": "^11.1.4",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.5"
+  }
+}
